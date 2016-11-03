@@ -1,10 +1,7 @@
 // everything is a function
-const
- React = require('react')
-const
- div = React.DOM.div
-const
- h1 = React.DOM.h1
+const React = require('react')
+const div = React.DOM.div
+const h1 = React.DOM.h1
 
 // Composite component
 // Render must return a component!!
