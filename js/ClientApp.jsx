@@ -1,16 +1,18 @@
 const React = require('react')
 const ReactDOM = require('react-dom')
+const Landing = require('./Landing')
+const { Router, Route, hashHistory } = require('react-router')
+// longhand version:
+// const ReactRouter = require('react-router')
+// const Router = ReactRouter.Router
+// const Route = ReactRouter.Route
+// const hashHistory = ReactRouter.hashHistory
 
 const App = function () {
   return (
-    // Objects in caps (ie: MyTitle) are user-generated, lowercase means it's just a component
-    <div className='app-container'>
-      <div className='home-info'>
-        <h1 className='title'>svideo</h1>
-        <input className='search' type='text' placeholder='Search' />
-        <button className='browse-all'> or Browse All</button>
-      </div>
-    </div>
+    <Router history={hashHistory}>
+      <Route path='/' component={Landing} />
+    </Router>
   )
 }
 
